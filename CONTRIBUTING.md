@@ -1,4 +1,30 @@
-# Contributing to dns-bench
+# Contributing to dns-bench <!-- omit in toc -->
+
+<details>
+<summary>Table of contents</summary>
+
+- [Description](#description)
+- [Code of Conduct](#code-of-conduct)
+- [Ways to Contribute](#ways-to-contribute)
+- [Development Setup](#development-setup)
+  - [Prerequisites](#prerequisites)
+  - [Devcontainers (optional)](#devcontainers-optional)
+  - [Building](#building)
+  - [Running](#running)
+  - [Testing](#testing)
+  - [Linting \& Formatting](#linting--formatting)
+- [Project Structure](#project-structure)
+- [Feature Guidelines](#feature-guidelines)
+- [Performance \& Reliability](#performance--reliability)
+- [Tests](#tests)
+- [Documentation](#documentation)
+- [Commit \& PR Etiquette](#commit--pr-etiquette)
+- [Release Process](#release-process)
+- [Security](#security)
+- [License](#license)
+</details>
+
+## Description
 
 Thanks for your interest in contributing! This document outlines how to propose changes, report issues, and develop locally. The project follows common practices used across the Rust crates community.
 
