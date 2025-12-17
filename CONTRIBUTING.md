@@ -1,5 +1,7 @@
 # Contributing to dns-bench <!-- omit in toc -->
 
+[devcontainers-marketplace-url]: https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers
+
 <details>
 <summary>Table of contents</summary>
 
@@ -52,9 +54,9 @@ This project adheres to a Code of Conduct. By participating, you agree to uphold
 
 ### Devcontainers (optional)
 
-This repo supports devcontainers. You can open it in VS Code with the [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension (or GitHub Codespaces) to get a pre-configured environment:
+This repo supports devcontainers. You can open it in VS Code with the [Dev Containers][devcontainers-marketplace-url] extension (or GitHub Codespaces) to get a pre-configured environment:
 
-1. Install VS Code and the [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension
+1. Install VS Code and the [Dev Containers][devcontainers-marketplace-url] extension
 2. Open the repository
 3. Use "Reopen in Container" to start a reproducible dev environment
 
