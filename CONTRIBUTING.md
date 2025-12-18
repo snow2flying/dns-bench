@@ -106,6 +106,7 @@ CI runs `cargo build`, `cargo test`, `cargo fmt --check`, and `cargo clippy -D w
 - `docker/` — Dockerfiles and CI scripts for image builds
 - `examples/` — example server lists and usage samples
 - `README.md` — usage, installation, and reference docs
+- `RELEASE.md` — release process checklist
 - `CHANGELOG.md` — release notes
 - `SECURITY.md` — how to report security issues
 
