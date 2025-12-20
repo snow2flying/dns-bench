@@ -1,4 +1,32 @@
-# Contributing to dns-bench
+# Contributing to dns-bench <!-- omit in toc -->
+
+[devcontainers-marketplace-url]: https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers
+
+<details>
+<summary>Table of contents</summary>
+
+- [Description](#description)
+- [Code of Conduct](#code-of-conduct)
+- [Ways to Contribute](#ways-to-contribute)
+- [Development Setup](#development-setup)
+  - [Prerequisites](#prerequisites)
+  - [Devcontainers (optional)](#devcontainers-optional)
+  - [Building](#building)
+  - [Running](#running)
+  - [Testing](#testing)
+  - [Linting \& Formatting](#linting--formatting)
+- [Project Structure](#project-structure)
+- [Feature Guidelines](#feature-guidelines)
+- [Performance \& Reliability](#performance--reliability)
+- [Tests](#tests)
+- [Documentation](#documentation)
+- [Commit \& PR Etiquette](#commit--pr-etiquette)
+- [Release Process](#release-process)
+- [Security](#security)
+- [License](#license)
+</details>
+
+## Description
 
 Thanks for your interest in contributing! This document outlines how to propose changes, report issues, and develop locally. The project follows common practices used across the Rust crates community.
 
@@ -26,9 +54,9 @@ This project adheres to a Code of Conduct. By participating, you agree to uphold
 
 ### Devcontainers (optional)
 
-This repo supports devcontainers. You can open it in VS Code with the Container Tools extension (or GitHub Codespaces) to get a pre-configured environment:
+This repo supports devcontainers. You can open it in VS Code with the [Dev Containers][devcontainers-marketplace-url] extension (or GitHub Codespaces) to get a pre-configured environment:
 
-1. Install VS Code and the "Container Tools" extension
+1. Install VS Code and the [Dev Containers][devcontainers-marketplace-url] extension
 2. Open the repository
 3. Use "Reopen in Container" to start a reproducible dev environment
 
@@ -72,18 +100,22 @@ CI runs `cargo build`, `cargo test`, `cargo fmt --check`, and `cargo clippy -D w
 ## Project Structure
 
 - `src/` — application source code
-  - `commands/` — config subcommands
+  - `commands/` — subcommands handling
   - `output/` — formatters (table, json, xml, csv)
 - `tests/` — test assets
 - `docker/` — Dockerfiles and CI scripts for image builds
+- `examples/` — example server lists and usage samples
 - `README.md` — usage, installation, and reference docs
+- `RELEASE.md` — release process checklist
 - `CHANGELOG.md` — release notes
+- `SECURITY.md` — how to report security issues
 
 ## Feature Guidelines
 
 - Keep default behavior sane. See `DnsBenchConfig` defaults and CLI.
 - Add flags for opt-in changes (e.g., `--disable-adaptive-timeout`).
 - Ensure output formats (table/JSON/XML/CSV) remain consistent.
+- Maintain cross-platform support (Linux, Windows, macOS). Features such as automatic gateway address detection and automatic system DNS servers detection must work reliably across all three OS families; include platform notes and tests where feasible.
 - Prefer small, incremental PRs.
 
 ## Performance & Reliability
